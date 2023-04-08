@@ -1,0 +1,15 @@
+---
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+import MarginContainer from "../components/atoms/MarginContainer.astro";
+
+const impressumData = await Astro.glob("../content/impressum/*.md");
+const impressum = impressumData[0];
+---
+
+<DefaultLayout title="Impressum">
+  <MarginContainer tailwind="mt-20 pb-24 md:mt-40">
+    <div class="prose max-w-none">
+      <impressum.Content />
+    </div>
+  </MarginContainer>
+</DefaultLayout>
