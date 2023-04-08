@@ -203,6 +203,43 @@ export default defineConfig({
           },
         ],
       },
+      {
+        name: "datenschutz",
+        label: "Datenschutzerklärung",
+        path: "src/content/datenschutz",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        templates: [
+          {
+            name: "default",
+            label: "Default",
+            ui: {
+              defaultItem: {
+                draft: false,
+              },
+            },
+            fields: [
+              {
+                type: "boolean",
+                name: "draft",
+                label: "Entwurf",
+                required: true,
+              },
+              {
+                type: "rich-text",
+                name: "body",
+                label: "Inhalt",
+                required: true,
+                isBody: true,
+              },
+            ],
+          },
+        ],
+      },
     ],
   },
 });
