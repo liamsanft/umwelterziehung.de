@@ -1,6 +1,7 @@
 <header class="fixed z-50">
   <nav
     id="menu-nav"
+    aria-hidden="true"
     class="menu-closed fixed inset-0 z-40 h-full w-full items-center justify-center bg-egg/20 backdrop-blur-sm md:mx-auto md:mt-7 md:h-max md:w-max md:rounded-md md:px-5 md:py-1"
   >
     <ul class="text-center md:flex">
@@ -26,6 +27,7 @@
   </nav>
   <button
     id="menu-button"
+    aria-label="Menü öffnen oder schließen"
     class="fixed right-0 top-0 z-50 mr-4 mt-3 rounded-md px-2 py-1 font-bold md:hidden"
     >Menü</button
   >
@@ -61,9 +63,11 @@
     if (menuOpen) {
       nav.classList.add("menu-open");
       nav.classList.remove("menu-closed");
+      nav.ariaHidden = "false";
     } else {
       nav.classList.add("menu-closed");
       nav.classList.remove("menu-open");
+      nav.ariaHidden = "true";
     }
   });
 </script>
