@@ -2,173 +2,85 @@
 import MarginContainer from "../atoms/MarginContainer.astro";
 import ChevronDown from "../icons/ChevronDown.astro";
 import ChevronUp from "../icons/ChevronUp.astro";
+
+const offices = await Astro.glob("../../content/offices/*.md");
 ---
 
 <section class="bg-light-green pb-8 pt-24">
   <MarginContainer>
     <h2 class="text-3xl font-black">Unsere Büros</h2>
     <ul class="mt-14">
-      <li>
-        <button
-          class="footer-button flex w-full justify-between pb-4 text-left"
-        >
-          <div>
-            <h3 class="text-xl font-black">DGU Büro MV</h3>
-            <p class="mt-2 max-w-[20rem]">
-              Brandenburg, Mecklenburg-Vorpommern, Sachsen-Anhalt
-            </p>
-            <div class="footer-container mt-3 hidden flex-col">
-              <p>
-                <span class="font-bold">Adresse:</span> Lindenstraße 6 <br
-                />19406 Neu Pastin
-              </p>
-              <p>
-                <span class="font-bold">Telefon:</span>
-                <a href="tel:+491784402955">+49 178 4402955</a>
-              </p>
-              <p>
-                <span class="font-bold">E-Mail:</span>
-                <a href="mailto:sekretariat@umwelterziehung.de"
-                  >sekretariat@umwelterziehung.de</a
-                >
-              </p>
-              <p>
-                <span class="font-bold">Projekte:</span> Blaue Flagge
-              </p>
-            </div>
-          </div>
-          <div class="ml-3 mt-4">
-            <div class="chevron-down-container block">
-              <ChevronDown tailwind="w-10" />
-            </div>
-            <div class="chevron-up-container hidden">
-              <ChevronUp tailwind="w-10" />
-            </div>
-          </div>
-        </button>
-        <span class="block h-[1px] w-full bg-neutral-900"></span>
-      </li>
-      <li class="mt-7">
-        <button
-          class="footer-button flex w-full justify-between pb-4 text-left"
-        >
-          <div>
-            <h3 class="text-xl font-black">DGU Büro Erfurt</h3>
-            <p class="mt-2 max-w-[20rem]">Thüringen, Sachsen</p>
-            <div class="footer-container mt-3 hidden flex-col">
-              <p>
-                <span class="font-bold">Ansprechpartner:</span> Robert Lorenz
-              </p>
-              <p>
-                <span class="font-bold">Adresse:</span> Goethestraße 64 <br
-                />99096 Erfurt
-              </p>
-              <p>
-                <span class="font-bold">Telefon:</span>
-                <a href="tel:+491784402955">+49 178 4402955</a>
-              </p>
-              <p>
-                <span class="font-bold">E-Mail:</span>
-                <a href="mailto:sekretariat@umwelterziehung.de"
-                  >sekretariat@umwelterziehung.de</a
-                >
-              </p>
-              <p>
-                <span class="font-bold">Projekte:</span> Green Key, USE/INS, Blaue
-                Flagge
-              </p>
-            </div>
-          </div>
-          <div class="ml-3 mt-4">
-            <div class="chevron-down-container block">
-              <ChevronDown tailwind="w-10" />
-            </div>
-            <div class="chevron-up-container hidden">
-              <ChevronUp tailwind="w-10" />
-            </div>
-          </div>
-        </button>
-        <span class="block h-[1px] w-full bg-neutral-900"></span>
-      </li>
-      <li class="mt-7">
-        <button
-          class="footer-button flex w-full justify-between pb-4 text-left"
-        >
-          <div>
-            <h3 class="text-xl font-black">Hilpoltstein</h3>
-            <p class="mt-2 max-w-[20rem]">Bayern</p>
-            <div class="footer-container mt-3 hidden flex-col">
-              <p>
-                <span class="font-bold">Ansprechpartner:</span> Birgit Feldmann,
-                Iris Kirschke
-              </p>
-              <p>
-                <span class="font-bold">Adresse:</span> Eisvogelweg 1<br />
-                91161 Hilpoltstein
-              </p>
-              <p>
-                <span class="font-bold">Telefon:</span>
-                <a href="tel:+499174477542">+49 9174 477542</a>
-              </p>
-              <p>
-                <span class="font-bold">Fax:</span>
-                <a href="tel:+499174477575">+49 9174 477575</a>
-              </p>
-              <p>
-                <span class="font-bold">E-Mail:</span>
-                <a href="mailto:b-feldmann@lbv.de">b-feldmann@lbv.de</a>
-              </p>
-            </div>
-          </div>
-          <div class="ml-3 mt-4">
-            <div class="chevron-down-container block">
-              <ChevronDown tailwind="w-10" />
-            </div>
-            <div class="chevron-up-container hidden">
-              <ChevronUp tailwind="w-10" />
-            </div>
-          </div>
-        </button>
-        <span class="block h-[1px] w-full bg-neutral-900"></span>
-      </li>
-      <li class="mt-7">
-        <button
-          class="footer-button flex w-full justify-between pb-4 text-left"
-        >
-          <div>
-            <h3 class="text-xl font-black">Berlin</h3>
-            <div class="footer-container mt-3 hidden flex-col">
-              <p>
-                <span class="font-bold">Ansprechpartner:</span> Stephanie Pröpsting
-              </p>
-              <p>
-                <span class="font-bold">Telefon:</span>
-                <a href="tel:+493083852744"> +49 30 83852744</a>
-              </p>
-              <p>
-                <span class="font-bold">E-Mail:</span>
-                <a href="mailto:proepsting@institutfutur.de"
-                  >proepsting@institutfutur.de</a
-                >
-              </p>
-              <p>
-                <span class="font-bold">Projekte:</span> Nachhaltige Entwicklung
-                mitgestalten - Ein Qualifizierungs- und Beteiligungsprojekt für junge
-                Menschen in Kroatien
-              </p>
-            </div>
-          </div>
-          <div class="ml-3 mt-4">
-            <div class="chevron-down-container block">
-              <ChevronDown tailwind="w-10" />
-            </div>
-            <div class="chevron-up-container hidden">
-              <ChevronUp tailwind="w-10" />
-            </div>
-          </div>
-        </button>
-        <span class="block h-[1px] w-full bg-neutral-900"></span>
-      </li>
+      {
+        offices.map((officeData, i) => {
+          const office = officeData.frontmatter;
+
+          if (!office.draft) {
+            return (
+              <li class={i > 0 && "mt-7"}>
+                <button class="footer-button flex w-full justify-between pb-4 text-left">
+                  <div>
+                    <h3 class="text-xl font-black">{office.name}</h3>
+                    {office.verwaltungsbereiche?.length > 0 && (
+                      <p class="mt-2 max-w-[20rem]">
+                        {office.verwaltungsbereiche.map((bundesland, i) =>
+                          i + 1 === office.verwaltungsbereiche.length
+                            ? bundesland
+                            : `${bundesland}, `
+                        )}
+                      </p>
+                    )}
+                    <div class="footer-container mt-3 hidden flex-col">
+                      {office.address && (
+                        <p>
+                          <span class="font-bold">Adresse:</span>{" "}
+                          {office.address}
+                        </p>
+                      )}
+                      {office.telefon && (
+                        <p>
+                          <span class="font-bold">Telefon:</span>
+                          <a href={`tel:${office.telefon}`}>{office.telefon}</a>
+                        </p>
+                      )}
+                      {office.fax && (
+                        <p>
+                          <span class="font-bold">Fax:</span>
+                          <a href={`tel:${office.fax}`}>{office.fax}</a>
+                        </p>
+                      )}
+                      {office.email && (
+                        <p>
+                          <span class="font-bold">E-Mail:</span>
+                          <a href={`mailto:${office.email}`}>{office.email}</a>
+                        </p>
+                      )}
+                      {office.projekte?.length > 0 && (
+                        <p>
+                          <span class="font-bold">Projekte:</span>{" "}
+                          {office.projekte.map((projekt, i) =>
+                            i + 1 === office.projekte.length
+                              ? projekt
+                              : `${projekt}, `
+                          )}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div class="ml-3 mt-4">
+                    <div class="chevron-down-container block">
+                      <ChevronDown tailwind="w-10" />
+                    </div>
+                    <div class="chevron-up-container hidden">
+                      <ChevronUp tailwind="w-10" />
+                    </div>
+                  </div>
+                </button>
+                <span class="block h-[1px] w-full bg-neutral-900" />
+              </li>
+            );
+          }
+        })
+      }
     </ul>
     <div class="mt-20 flex justify-between">
       <p>&copy; 2023 Deutsche Gesellschaft für Umwelterziehung</p>
