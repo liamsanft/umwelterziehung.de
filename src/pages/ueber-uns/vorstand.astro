@@ -1,0 +1,52 @@
+---
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+
+const ueberunsData = await Astro.glob("../../content/ueber-uns/*.md");
+const ueberuns = ueberunsData[0];
+
+const vorstand = ueberuns.frontmatter.vorstand.personen;
+---
+
+<DefaultLayout title="Vorstand">
+  <div class="not-prose">
+    <h1 class="text-4xl font-black text-dark-green">Vorstand</h1>
+    <div class="mt-7">
+      {
+        vorstand.map((person, i) => {
+          return (
+            <div class={`${i > 0 && "mt-7"} not-prose`}>
+              <h2 class="text-xl font-bold">{person.funktion}</h2>
+              <p>{person.name}</p>
+              <div class="mt-1">
+                {person.adresse && (
+                  <p>
+                    <span class="font-bold">Adresse:</span>
+                    {person.adresse}
+                  </p>
+                )}
+                {person.telefon && (
+                  <p>
+                    <span class="font-bold">Telefon:</span>
+                    <a href={`tel:${person.telefon}`}>{person.telefon}</a>
+                  </p>
+                )}
+                {person.fax && (
+                  <p>
+                    <span class="font-bold">Fax:</span>
+                    <a href={`tel:${person.fax}`}>{person.fax}</a>
+                  </p>
+                )}
+                {person.email && (
+                  <p>
+                    <span class="font-bold">E-Mail:</span>
+                    <a href={`mailto:${person.email}`}>{person.email}</a>
+                  </p>
+                )}
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</DefaultLayout>

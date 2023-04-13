@@ -1,6 +1,6 @@
 ---
 draft: false
-datum: '2021-03-07T23:00:00.000Z'
+datum: "2021-03-07T23:00:00.000Z"
 titel: Bericht des DGU Vorstandes
 anhang:
   label: zum Download

@@ -6,6 +6,7 @@ specifiers:
   '@tailwindcss/typography': ^0.5.9
   '@tinacms/cli': ^1.5.5
   astro: ^2.2.0
+  marked: ^4.3.0
   prettier: ^2.8.7
   prettier-plugin-astro: ^0.8.0
   prettier-plugin-tailwindcss: ^0.2.7
@@ -17,6 +18,7 @@ dependencies:
   '@astrojs/ts-plugin': 0.4.4
   '@tinacms/cli': 1.5.5
   astro: 2.2.0
+  marked: 4.3.0
   tailwindcss: 3.3.1
   tinacms: 1.4.5
 
@@ -9518,6 +9520,12 @@ packages:
 
   /markdown-table/3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
+    dev: false
+
+  /marked/4.3.0:
+    resolution: {integrity: sha512-PRsaiG84bK+AMvxziE/lCFss8juXjNaWzVbN5tXAm4XjeaS9NAHhop+PjQxz2A9h8Q4M/xGmzP8vqNwy6JeK0A==}
+    engines: {node: '>= 12'}
+    hasBin: true
     dev: false
 
   /material-colors/1.2.6:

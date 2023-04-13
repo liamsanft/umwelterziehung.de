@@ -1,6 +1,6 @@
 ---
 draft: false
-datum: '2022-05-07T22:00:00.000Z'
+datum: "2022-05-07T22:00:00.000Z"
 titel: Nachruf auf Dr. Michael Plesse
 _template: default
 ---

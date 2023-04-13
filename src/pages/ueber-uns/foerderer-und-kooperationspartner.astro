@@ -1,0 +1,73 @@
+---
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+
+const ueberunsData = await Astro.glob("../../content/ueber-uns/*.md");
+const ueberuns = ueberunsData[0];
+---
+
+<DefaultLayout title="Förderer und Kooperationspartner">
+  <div class="not-prose">
+    <h1 class="text-4xl font-black text-dark-green">
+      Förderer und Kooperationspartner
+    </h1>
+    <div class="mt-10">
+      <h2 class="text-3xl font-bold">Förderer</h2>
+      <div class="mt-5 flex flex-wrap gap-5">
+        {
+          ueberuns.frontmatter.foerderer_kooperationspartner.foerderer
+            .sort((a, b) => {
+              if (a.name < b.name) {
+                return -1;
+              } else {
+                return 1;
+              }
+            })
+            .map((foerderer, i) => (
+              <a
+                href={`${foerderer.email_web.includes("@") ? "mailto:" : ""}${
+                  foerderer.email_web
+                }`}
+                class={`${
+                  i != 0 && "mt-3 lg:mt-0"
+                } flex w-full max-w-sm flex-col justify-center rounded-md px-4 py-2 shadow-md`}
+              >
+                <h3 class="font-bold">{foerderer.name}</h3>
+                <p>{foerderer.email_web}</p>
+              </a>
+            ))
+        }
+      </div>
+    </div>
+    <div class="mt-10">
+      <h2 class="text-3xl font-bold">Kooperationspartner</h2>
+      <div class="mt-5 flex flex-wrap gap-5">
+        {
+          ueberuns.frontmatter.foerderer_kooperationspartner.kooperationspartner
+            .sort((a, b) => {
+              if (a.name < b.name) {
+                return -1;
+              } else {
+                return 1;
+              }
+            })
+            .map((kooperationspartner, i) => (
+              <div
+                class={`${
+                  i != 0 && "mt-3 lg:mt-0"
+                } flex w-full max-w-sm flex-col justify-center rounded-md px-4 py-2 shadow-md`}
+              >
+                <h3 class="font-bold">{kooperationspartner.name}</h3>
+                <a
+                  href={`${
+                    kooperationspartner.email_web.includes("@") ? "mailto:" : ""
+                  }${kooperationspartner.email_web}`}
+                >
+                  {kooperationspartner.email_web}
+                </a>
+              </div>
+            ))
+        }
+      </div>
+    </div>
+  </div>
+</DefaultLayout>

@@ -1,0 +1,45 @@
+---
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+
+const ueberunsData = await Astro.glob("../../content/ueber-uns/*.md");
+const ueberuns = ueberunsData[0];
+---
+
+<DefaultLayout title="Über uns">
+  <ueberuns.Content />
+  <div class="not-prose">
+    <h2 class="mt-16 text-3xl font-bold">Die Struktur des Vereins</h2>
+    <div class="mt-10 flex flex-wrap gap-16">
+      <a
+        href="/ueber-uns/mitgliedschaft"
+        class="w-full max-w-lg rounded-md bg-egg px-5 py-3 drop-shadow-lg hover:drop-shadow-xl"
+      >
+        <h3 class="text-lg font-bold">Mitgliedschaft</h3>
+        <p class="mt-1">
+          {ueberuns.frontmatter.mitgliedschaft.kurzbeschreibung}
+        </p>
+        <p class="mt-2 font-bold">Mehr erfahren</p>
+      </a>
+      <a
+        href="/ueber-uns/foerderer-und-kooperationspartner"
+        class="w-full max-w-lg rounded-md bg-egg px-5 py-3 drop-shadow-lg hover:drop-shadow-xl"
+      >
+        <h3 class="text-lg font-bold">Förderer & Kooperationspartner</h3>
+        <p class="mt-1">
+          {ueberuns.frontmatter.foerderer_kooperationspartner.kurzbeschreibung}
+        </p>
+        <p class="mt-2 font-bold">Mehr erfahren</p>
+      </a>
+      <a
+        href="/ueber-uns/vorstand"
+        class="w-full max-w-lg rounded-md bg-egg px-5 py-3 drop-shadow-lg hover:drop-shadow-xl"
+      >
+        <h3 class="text-lg font-bold">Vorstand</h3>
+        <p class="mt-1">
+          {ueberuns.frontmatter.foerderer_kooperationspartner.kurzbeschreibung}
+        </p>
+        <p class="mt-2 font-bold">Mehr erfahren</p>
+      </a>
+    </div>
+  </div>
+</DefaultLayout>

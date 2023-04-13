@@ -3,82 +3,78 @@ import MarginContainer from "../atoms/MarginContainer.astro";
 import ChevronDown from "../icons/ChevronDown.astro";
 import ChevronUp from "../icons/ChevronUp.astro";
 
-const offices = await Astro.glob("../../content/offices/*.md");
+const officesData = await Astro.glob("../../content/offices/*.md");
+const offices = officesData[0].frontmatter.offices;
 ---
 
-<section class="bg-light-green pb-8 pt-24">
+<footer class="bg-light-green pb-8 pt-24 text-neutral-900">
   <MarginContainer>
     <h2 class="text-3xl font-black">Unsere Büros</h2>
     <ul class="mt-14">
       {
-        offices.map((officeData, i) => {
-          const office = officeData.frontmatter;
-
-          if (!office.draft) {
-            return (
-              <li class={i > 0 && "mt-7"}>
-                <button class="footer-button flex w-full justify-between pb-4 text-left">
-                  <div>
-                    <h3 class="text-xl font-black">{office.name}</h3>
-                    {office.verwaltungsbereiche?.length > 0 && (
-                      <p class="mt-2 max-w-[20rem]">
-                        {office.verwaltungsbereiche.map((bundesland, i) =>
-                          i + 1 === office.verwaltungsbereiche.length
-                            ? bundesland
-                            : `${bundesland}, `
+        offices.map((office, i) => {
+          return (
+            <li class={i > 0 && "mt-7"}>
+              <button class="footer-button flex w-full justify-between pb-4 text-left">
+                <div>
+                  <h3 class="text-xl font-black">{office.name}</h3>
+                  {office.bundeslaender?.length > 0 && (
+                    <p class="mt-2 max-w-[20rem]">
+                      {office.bundeslaender.map((bundesland, i) =>
+                        i + 1 === office.bundeslaender.length
+                          ? bundesland
+                          : `${bundesland}, `
+                      )}
+                    </p>
+                  )}
+                  <div class="footer-container mt-3 hidden flex-col">
+                    {office.adresse && (
+                      <p>
+                        <span class="font-bold">Adresse:</span> {office.adresse}
+                      </p>
+                    )}
+                    {office.telefon && (
+                      <p>
+                        <span class="font-bold">Telefon:</span>
+                        <a href={`tel:${office.telefon}`}>{office.telefon}</a>
+                      </p>
+                    )}
+                    {office.fax && (
+                      <p>
+                        <span class="font-bold">Fax:</span>
+                        <a href={`tel:${office.fax}`}>{office.fax}</a>
+                      </p>
+                    )}
+                    {office.email && (
+                      <p>
+                        <span class="font-bold">E-Mail:</span>
+                        <a href={`mailto:${office.email}`}>{office.email}</a>
+                      </p>
+                    )}
+                    {office.projekte?.length > 0 && (
+                      <p>
+                        <span class="font-bold">Projekte:</span>{" "}
+                        {office.projekte.map((projekt, i) =>
+                          i + 1 === office.projekte.length
+                            ? projekt
+                            : `${projekt}, `
                         )}
                       </p>
                     )}
-                    <div class="footer-container mt-3 hidden flex-col">
-                      {office.address && (
-                        <p>
-                          <span class="font-bold">Adresse:</span>{" "}
-                          {office.address}
-                        </p>
-                      )}
-                      {office.telefon && (
-                        <p>
-                          <span class="font-bold">Telefon:</span>
-                          <a href={`tel:${office.telefon}`}>{office.telefon}</a>
-                        </p>
-                      )}
-                      {office.fax && (
-                        <p>
-                          <span class="font-bold">Fax:</span>
-                          <a href={`tel:${office.fax}`}>{office.fax}</a>
-                        </p>
-                      )}
-                      {office.email && (
-                        <p>
-                          <span class="font-bold">E-Mail:</span>
-                          <a href={`mailto:${office.email}`}>{office.email}</a>
-                        </p>
-                      )}
-                      {office.projekte?.length > 0 && (
-                        <p>
-                          <span class="font-bold">Projekte:</span>{" "}
-                          {office.projekte.map((projekt, i) =>
-                            i + 1 === office.projekte.length
-                              ? projekt
-                              : `${projekt}, `
-                          )}
-                        </p>
-                      )}
-                    </div>
                   </div>
-                  <div class="ml-3 mt-4">
-                    <div class="chevron-down-container block">
-                      <ChevronDown tailwind="w-10" />
-                    </div>
-                    <div class="chevron-up-container hidden">
-                      <ChevronUp tailwind="w-10" />
-                    </div>
+                </div>
+                <div class="ml-3 mt-4">
+                  <div class="chevron-down-container block">
+                    <ChevronDown tailwind="w-10" />
                   </div>
-                </button>
-                <span class="block h-[1px] w-full bg-neutral-900" />
-              </li>
-            );
-          }
+                  <div class="chevron-up-container hidden">
+                    <ChevronUp tailwind="w-10" />
+                  </div>
+                </div>
+              </button>
+              <span class="block h-[1px] w-full bg-neutral-900" />
+            </li>
+          );
         })
       }
     </ul>
@@ -90,7 +86,7 @@ const offices = await Astro.glob("../../content/offices/*.md");
       </div>
     </div>
   </MarginContainer>
-</section>
+</footer>
 
 <script>
   const footerButtons = document.getElementsByClassName("footer-button");

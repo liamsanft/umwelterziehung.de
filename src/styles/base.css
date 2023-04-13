@@ -6,7 +6,11 @@
 @layer base {
   html,
   body {
-    @apply h-full w-full bg-egg text-neutral-900;
+    @apply h-full w-full bg-egg text-neutral-700;
+  }
+
+  h1, h2, h3, h4, h5, h6, a {
+    @apply text-neutral-900
   }
 }
 

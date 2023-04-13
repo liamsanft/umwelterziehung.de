@@ -1,0 +1,13 @@
+---
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import { marked } from "marked";
+
+const ueberunsData = await Astro.glob("../../content/ueber-uns/*.md");
+const ueberuns = ueberunsData[0];
+
+const content = marked.parse(ueberuns.frontmatter.mitgliedschaft.content);
+---
+
+<DefaultLayout title="Mitgliedschaft">
+  <div set:html={content} />
+</DefaultLayout>

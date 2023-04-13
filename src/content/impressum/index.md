@@ -1,8 +1,3 @@
----
-draft: false
-_template: default
----
-
 # Impressum
 
 ## Betreiber der Website

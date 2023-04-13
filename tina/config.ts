@@ -1,7 +1,15 @@
+import { string } from "astro/zod";
 import { defineConfig } from "tinacms";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
+
+const umlautMap = {
+  "\u00fc": "ue",
+  "\u00e4": "ae",
+  "\u00f6": "oe",
+  "\u00df": "ss",
+};
 
 export default defineConfig({
   branch,
@@ -98,36 +106,37 @@ export default defineConfig({
         ],
       },
       {
-        name: "office",
-        label: "Offices",
+        name: "offices",
+        label: "Büros",
         path: "src/content/offices",
-        templates: [
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
           {
-            name: "default",
-            label: "Default",
+            type: "object",
+            name: "offices",
+            label: "Büros",
+            list: true,
             ui: {
-              defaultItem: {
-                draft: false,
+              itemProps: (item) => {
+                return { label: item?.name };
               },
             },
             fields: [
               {
-                type: "boolean",
-                name: "draft",
-                label: "Entwurf",
-                required: true,
-              },
-              {
                 type: "string",
                 name: "name",
-                label: "Name des Büros",
-                isTitle: true,
+                label: "Büroname",
                 required: true,
               },
               {
                 type: "string",
-                name: "verwaltungsbereiche",
-                label: "Verwaltungsbereiche",
+                name: "bundeslaender",
+                label: "Bundesländer",
                 list: true,
               },
               {
@@ -138,7 +147,7 @@ export default defineConfig({
               },
               {
                 type: "string",
-                name: "address",
+                name: "adresse",
                 label: "Adresse",
               },
               {
@@ -167,6 +176,163 @@ export default defineConfig({
         ],
       },
       {
+        name: "ueber_uns",
+        label: "Über uns",
+        path: "src/content/ueber-uns",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Inhalt",
+            required: true,
+            isBody: true,
+          },
+          {
+            type: "object",
+            name: "mitgliedschaft",
+            label: "Mitgliedschaft",
+            required: true,
+            fields: [
+              {
+                type: "string",
+                name: "kurzbeschreibung",
+                label: "Kurzbeschreibung",
+                required: true,
+              },
+              {
+                type: "rich-text",
+                name: "content",
+                label: "Inhalt",
+                required: true,
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "foerderer_kooperationspartner",
+            label: "Förderer und Kooperationspartner",
+            required: true,
+            fields: [
+              {
+                type: "string",
+                name: "kurzbeschreibung",
+                label: "Kurzbeschreibung",
+                required: true,
+              },
+              {
+                type: "object",
+                name: "foerderer",
+                label: "Förderer",
+                list: true,
+                ui: {
+                  itemProps: (item) => {
+                    return { label: item?.name };
+                  },
+                },
+                fields: [
+                  {
+                    type: "string",
+                    name: "name",
+                    label: "Name",
+                    required: true,
+                  },
+                  {
+                    type: "string",
+                    name: "email_web",
+                    label: "Email oder Website",
+                    required: true,
+                  },
+                ],
+              },
+              {
+                type: "object",
+                name: "kooperationspartner",
+                label: "Kooperationspartner",
+                list: true,
+                ui: {
+                  itemProps: (item) => {
+                    return { label: item?.name };
+                  },
+                },
+                fields: [
+                  {
+                    type: "string",
+                    name: "name",
+                    label: "Name",
+                    required: true,
+                  },
+                  {
+                    type: "string",
+                    name: "email_web",
+                    label: "Email oder Website",
+                    required: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "vorstand",
+            label: "Vorstand",
+            required: true,
+            fields: [
+              {
+                type: "object",
+                name: "personen",
+                label: "Personen",
+                list: true,
+                ui: {
+                  itemProps: (item) => {
+                    return { label: item?.name };
+                  },
+                },
+                fields: [
+                  {
+                    type: "string",
+                    name: "funktion",
+                    label: "Funktion",
+                    required: true,
+                  },
+                  {
+                    type: "string",
+                    name: "name",
+                    label: "Name",
+                    required: true,
+                  },
+                  {
+                    type: "string",
+                    name: "adresse",
+                    label: "Adresse",
+                  },
+                  {
+                    type: "string",
+                    name: "telefon",
+                    label: "Telefon",
+                  },
+                  {
+                    type: "string",
+                    name: "fax",
+                    label: "Fax",
+                  },
+                  {
+                    type: "string",
+                    name: "email",
+                    label: "Email",
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
         name: "impressum",
         label: "Impressum",
         path: "src/content/impressum",
@@ -176,30 +342,13 @@ export default defineConfig({
             delete: false,
           },
         },
-        templates: [
+        fields: [
           {
-            name: "default",
-            label: "Default",
-            ui: {
-              defaultItem: {
-                draft: false,
-              },
-            },
-            fields: [
-              {
-                type: "boolean",
-                name: "draft",
-                label: "Entwurf",
-                required: true,
-              },
-              {
-                type: "rich-text",
-                name: "body",
-                label: "Inhalt",
-                required: true,
-                isBody: true,
-              },
-            ],
+            type: "rich-text",
+            name: "body",
+            label: "Inhalt",
+            required: true,
+            isBody: true,
           },
         ],
       },
@@ -213,30 +362,13 @@ export default defineConfig({
             delete: false,
           },
         },
-        templates: [
+        fields: [
           {
-            name: "default",
-            label: "Default",
-            ui: {
-              defaultItem: {
-                draft: false,
-              },
-            },
-            fields: [
-              {
-                type: "boolean",
-                name: "draft",
-                label: "Entwurf",
-                required: true,
-              },
-              {
-                type: "rich-text",
-                name: "body",
-                label: "Inhalt",
-                required: true,
-                isBody: true,
-              },
-            ],
+            type: "rich-text",
+            name: "body",
+            label: "Inhalt",
+            required: true,
+            isBody: true,
           },
         ],
       },

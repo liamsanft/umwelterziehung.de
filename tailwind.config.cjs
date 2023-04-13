@@ -8,6 +8,15 @@ module.exports = {
         "dark-green": "#435F51",
         "light-green": "#63967D",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            h1: {
+              color: "#435F51",
+            },
+          },
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

@@ -2,7 +2,6 @@
 import "../styles/base.css";
 import Header from "../components/organisms/Header.astro";
 import Footer from "../components/organisms/Footer.astro";
-import MarginContainer from "../components/atoms/MarginContainer.astro";
 const { title } = Astro.props;
 ---
 
@@ -23,11 +22,7 @@ const { title } = Astro.props;
   <body>
     <Header />
     <main class="h-full w-full">
-      <MarginContainer tailwind="mt-20 pb-24 md:mt-40">
-        <div class="prose prose-neutral max-w-none">
-          <slot />
-        </div>
-      </MarginContainer>
+      <slot />
       <Footer />
     </main>
   </body>
