@@ -5,19 +5,19 @@ foerderer_kooperationspartner:
     Gesellschaft für Umwelterziehung.
   foerderer:
     - name: Bäderverband Mecklenburg-Vorpommern
-      email_web: 'http://www.wild-east.de/firmen/baeder_mv/'
+      email_web: "http://www.wild-east.de/firmen/baeder_mv/"
     - name: Bayerisches Staatsministerium für Landesentwicklung und Umweltfragen
-      email_web: 'https://www.umweltministerium.bayern.de/'
+      email_web: "https://www.umweltministerium.bayern.de/"
     - name: BLK-Programm "21"
-      email_web: 'https://www.blk21.de/'
+      email_web: "https://www.blk21.de/"
     - name: Bundesministerium für Bildung und Forschung (BMBF)
-      email_web: 'https://www.bmbf.de/'
+      email_web: "https://www.bmbf.de/"
     - name: Deutsche Bundesstiftung Umwelt
-      email_web: 'https://www.dbu.de/'
+      email_web: "https://www.dbu.de/"
     - name: Deutscher Motoryachtverband e.V.
-      email_web: 'https://www.dmyv.de/'
+      email_web: "https://www.dmyv.de/"
     - name: Deutscher Segler-Verband e.V.
-      email_web: 'https://www.dsv.org/'
+      email_web: "https://www.dsv.org/"
     - name: Behörde für Schule und Berufsbildung der Freien und Hansestadt Hamburg
       email_web: >-
         https://www.hamburg.de/fhh/behoerden/
@@ -104,7 +104,7 @@ vorstand:
   personen:
     - funktion: Vorsitzender
       name: Robert Lorenz
-      adresse: 'Goethestraße 64, 99096 Erfurt'
+      adresse: "Goethestraße 64, 99096 Erfurt"
       telefon: +49 178 4402955
       email: sekretariat@umwelterziehung.de
     - funktion: Stellvertretender Vorsitzender
@@ -122,10 +122,10 @@ vorstand:
 
 fördert die Umwelterziehung als pädagogisch und wissenschaftlich fundierte Auseinandersetzung mit der natürlichen, der sozialen und der gebauten Umwelt. Dabei verfolgt sie auf nationaler Ebene die gleichen Ziele wie die [Stiftung für Umwelterziehung in Europa (F.E.E.)](https://www.fee.global/), die insbesondere die Nutzung vorhandener Einrichtungen zur Umwelterziehung und Initiativen zu ihrer Verbreitung unterstützt. Die Deutsche Gesellschaft für Umwelterziehung will diese Absicht vorrangig durch folgende Maßnahmen verwirklichen:
 
-* Veranstaltung oder Förderung von Seminaren, Tagungen, Informationsgesprächen, in denen vor allem die Intensivierung der unmittelbaren Umwelterfahrungen von Kindern, Jugendlichen und Erwachsenen im Mittelpunkt steht. Dies soll insbesondere durch eine Verbesserung der Zusammenarbeit mit Bildungsinstitutionen aller Art, mit kommunalen Einrichtungen, mit Behörden, mit Bürgern der Gemeinden, mit Vereinigungen und Betrieben erreicht werden.
-* Herausgabe oder Förderung entsprechender Publikationen, Gutachten und Studien.
-* Förderung der Aus- und Weiterbildung in der Umwelterziehung.
-* Förderung der internationalen Zusammenarbeit, vor allem mit der "Stiftung für Umwelterziehung in Europa".
+- Veranstaltung oder Förderung von Seminaren, Tagungen, Informationsgesprächen, in denen vor allem die Intensivierung der unmittelbaren Umwelterfahrungen von Kindern, Jugendlichen und Erwachsenen im Mittelpunkt steht. Dies soll insbesondere durch eine Verbesserung der Zusammenarbeit mit Bildungsinstitutionen aller Art, mit kommunalen Einrichtungen, mit Behörden, mit Bürgern der Gemeinden, mit Vereinigungen und Betrieben erreicht werden.
+- Herausgabe oder Förderung entsprechender Publikationen, Gutachten und Studien.
+- Förderung der Aus- und Weiterbildung in der Umwelterziehung.
+- Förderung der internationalen Zusammenarbeit, vor allem mit der "Stiftung für Umwelterziehung in Europa".
 
 Der Verein verfolgt diese Ziele ausschließlich und unmittelbar als
 gemeinnützige Zwecke im Sinne der §§ 51 bis 68 der Abgabeordnung vom

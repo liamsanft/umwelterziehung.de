@@ -24,3 +24,4 @@ pnpm-debug.log*
 node_modules
 
 __generated__
+public/admin/assets
