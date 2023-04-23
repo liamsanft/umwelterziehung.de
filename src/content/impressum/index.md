@@ -1,3 +1,4 @@
+
 # Impressum
 
 ## Betreiber der Website
@@ -8,7 +9,7 @@
 
 Ansprechpartner: Robert Lorenz
 
-Lindenstraße 6, 19406 Neu - Pastin
+Goethestraße 64, 99096 Erfurt
 
 Telefon: +49 178 4402955
 
