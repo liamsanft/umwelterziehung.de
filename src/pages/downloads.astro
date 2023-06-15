@@ -1,0 +1,102 @@
+---
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+import marked from "marked";
+
+const downloadsData = await Astro.glob("../content/downloads/*.md");
+const downloads = downloadsData[0].frontmatter.download;
+---
+
+<DefaultLayout title="Downloads">
+    <h1 class="text-4xl font-black text-dark-green">Downloads</h1>
+    <div>
+        {
+            downloads.map(
+                ({
+                    title,
+                    body,
+                    _template,
+                    downloadobject,
+                    downloadsection,
+                }) => {
+                    return (
+                        <div>
+                            <h2>{title && title != "" ? title : "Download"}</h2>
+                            {body && <div set:html={marked.parse(body)} />}
+                            {_template == "default" &&
+                                downloadobject &&
+                                downloadobject.length > 0 && (
+                                    <ul>
+                                        {downloadobject.map(
+                                            ({
+                                                downloadtitle,
+                                                downloadmedia,
+                                            }) => (
+                                                <li>
+                                                    <a
+                                                        href={
+                                                            downloadmedia &&
+                                                            downloadmedia != ""
+                                                                ? downloadmedia
+                                                                : "Download"
+                                                        }
+                                                    >
+                                                        {downloadtitle &&
+                                                        downloadtitle != ""
+                                                            ? downloadtitle
+                                                            : "/"}
+                                                    </a>
+                                                </li>
+                                            )
+                                        )}
+                                    </ul>
+                                )}
+                            {_template == "table" &&
+                                downloadsection &&
+                                downloadsection.length > 0 &&
+                                downloadsection.map(
+                                    ({ key, downloadobject }) => (
+                                        <div>
+                                            <h3>
+                                                {key && key != ""
+                                                    ? key
+                                                    : "Bereich"}
+                                            </h3>
+                                            {downloadobject &&
+                                                downloadobject.length > 0 && (
+                                                    <ul>
+                                                        {downloadobject.map(
+                                                            ({
+                                                                downloadtitle,
+                                                                downloadmedia,
+                                                            }) => (
+                                                                <li>
+                                                                    <a
+                                                                        href={
+                                                                            downloadmedia &&
+                                                                            downloadmedia !=
+                                                                                ""
+                                                                                ? downloadmedia
+                                                                                : "Download"
+                                                                        }
+                                                                    >
+                                                                        {downloadtitle &&
+                                                                        downloadtitle !=
+                                                                            ""
+                                                                            ? downloadtitle
+                                                                            : "/"}
+                                                                    </a>
+                                                                </li>
+                                                            )
+                                                        )}
+                                                    </ul>
+                                                )}
+                                        </div>
+                                    )
+                                )}
+                        </div>
+                    );
+                }
+            )
+        }
+    </div>
+</DefaultLayout>
