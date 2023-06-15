@@ -1,6 +1,6 @@
 ---
 import DefaultLayout from "../layouts/DefaultLayout.astro";
-import marked from "marked";
+import { marked } from "marked";
 
 const downloadsData = await Astro.glob("../content/downloads/*.md");
 const downloads = downloadsData[0].frontmatter.download;
