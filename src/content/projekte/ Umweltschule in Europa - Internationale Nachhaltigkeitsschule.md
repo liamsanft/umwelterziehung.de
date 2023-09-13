@@ -2,7 +2,7 @@
 title: ' Umweltschule in Europa - Internationale Nachhaltigkeitsschule'
 kurzbeschreibung: >-
   "Umweltschule in Europa - Internationale Nachhaltigkeitsschule" ist eine
-  Ausschreibung der europäischen Umweltbildungsstiftung F.E.E. (Foundation for
+  Ausschreibung der europäischen Umweltbildungsstiftung FEE (Foundation for
   Environmental Education), in Deutschland vertreten durch die Deutsche
   Gesellschaft für Umwelterziehung (DGU).Gegenwärtig beteiligen sich weltweit
   über 30000 Schulen in mehr als 50 Staaten; in Deutschland waren es im
