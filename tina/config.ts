@@ -171,6 +171,102 @@ export default defineConfig({
         ],
       },
       {
+        name: "projekte",
+        label: "Projekte",
+        path: "src/content/projekte",
+        ui: {
+          filename: {
+            readonly: true,
+            slugify: (values) => values?.title,
+          },
+        },
+        templates: [
+          {
+            name: "extern",
+            label: "Mit externer Seite",
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Projektname",
+                required: true,
+              },
+              {
+                type: "string",
+                name: "kurzbeschreibung",
+                label: "Kurzbeschreibung",
+                required: true,
+              },
+              {
+                type: "image",
+                name: "bild",
+                label: "Bild",
+                required: true,
+              },
+              {
+                type: "string",
+                name: "url",
+                label: "Link",
+                required: true,
+              },
+              {
+                type: "boolean",
+                name: "on_start",
+                label: "Auf Startseite zeigen?",
+                required: true,
+              },
+              {
+                type: "number",
+                name: "priority",
+                label: "Priorität",
+              },
+            ],
+          },
+          {
+            name: "seite",
+            label: "Eigene Seite",
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Projektname",
+                required: true,
+              },
+              {
+                type: "string",
+                name: "kurzbeschreibung",
+                label: "Kurzbeschreibung",
+                required: true,
+              },
+              {
+                type: "image",
+                name: "bild",
+                label: "Bild",
+                required: true,
+              },
+              {
+                type: "rich-text",
+                name: "inhalt",
+                label: "Inhalt",
+                isBody: true,
+                required: true,
+              },
+              {
+                type: "boolean",
+                name: "on_start",
+                label: "Auf Startseite zeigen?",
+                required: true,
+              },
+              {
+                type: "number",
+                name: "priority",
+                label: "Priorität",
+              },
+            ],
+          },
+        ],
+      },
+      {
         name: "ueber_uns",
         label: "Über uns",
         path: "src/content/ueber-uns",

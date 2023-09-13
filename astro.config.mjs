@@ -13,4 +13,7 @@ export default defineConfig({
     }),
     compress(),
   ],
+  experimental: {
+    assets: true,
+  },
 });
