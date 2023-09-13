@@ -1,5 +1,6 @@
 import { defineConfig } from "tinacms";
 import { umlautMap } from "./utilities/umlautMap";
+import { object } from "astro/zod";
 
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
 
@@ -458,6 +459,48 @@ export default defineConfig({
                     ],
                   },
                 ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: "wwwumwelt",
+        label: "www.umwelt",
+        path: "src/content/wwwumwelt",
+        ui: {
+          filename: {
+            readonly: true,
+            slugify: (values) => values?.title,
+          },
+        },
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Titel",
+            required: true,
+          },
+          {
+            type: "object",
+            name: "items",
+            label: "Items",
+            list: true,
+            ui: {
+              itemProps: (item) => {
+                return { label: item?.title };
+              },
+            },
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Titel",
+              },
+              {
+                type: "string",
+                name: "url",
+                label: "Link",
               },
             ],
           },
