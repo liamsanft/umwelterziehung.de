@@ -1,0 +1,28 @@
+---
+import {formatPaths} from "../../utilities";
+import DefaultLayout from "../../layouts/DefaultLayout.astro"
+
+export async function getStaticPaths() {
+  const projekte = await Astro.glob("../../content/projekte/*.md");
+  let pathList = []
+
+  projekte.map((projekt) => {
+    pathList.push({
+      params: {
+        projekt: formatPaths(projekt.file).replace(".md", "")
+      },
+      props: {
+        projekt
+      }
+    })
+  })
+  
+  return pathList;
+}
+
+const { Content} = Astro.props.projekt
+---
+
+<DefaultLayout title="Projekte">
+<Content />
+</DefaultLayout>

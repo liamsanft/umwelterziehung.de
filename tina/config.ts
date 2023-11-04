@@ -177,7 +177,15 @@ export default defineConfig({
         ui: {
           filename: {
             readonly: true,
-            slugify: (values) => values?.title,
+            slugify: (values) => {
+              return `${values?.title
+                ?.toLowerCase()
+                .replace(/ /g, "-")
+                .replace(/ö/, "oe")
+                .replace(/ä/, "ae")
+                .replace(/ü/, "ue")
+                .replace(/[^a-zA-Z\d\-]/g, "")}`;
+            },
           },
         },
         templates: [

@@ -1,0 +1,1 @@
+export {formatPaths} from "./formatPaths";
