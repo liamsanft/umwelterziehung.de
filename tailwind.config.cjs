@@ -14,6 +14,10 @@ module.exports = {
             h1: {
               color: "#435F51",
             },
+            img: {
+              float: "left",
+              margin: "1rem",
+            },
           },
         },
       },

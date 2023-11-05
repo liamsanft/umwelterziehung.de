@@ -203,6 +203,9 @@ export default defineConfig({
                 type: "string",
                 name: "kurzbeschreibung",
                 label: "Kurzbeschreibung",
+                ui: {
+                  component: "textarea",
+                },
                 required: true,
               },
               {
@@ -221,7 +224,6 @@ export default defineConfig({
                 type: "boolean",
                 name: "on_start",
                 label: "Auf Startseite zeigen?",
-                required: true,
               },
               {
                 type: "number",
@@ -244,6 +246,9 @@ export default defineConfig({
                 type: "string",
                 name: "kurzbeschreibung",
                 label: "Kurzbeschreibung",
+                ui: {
+                  component: "textarea",
+                },
                 required: true,
               },
               {
@@ -253,17 +258,74 @@ export default defineConfig({
                 required: true,
               },
               {
-                type: "rich-text",
-                name: "inhalt",
+                type: "object",
+                name: "content",
                 label: "Inhalt",
-                isBody: true,
-                required: true,
+                list: true,
+                templates: [
+                  {
+                    name: "text",
+                    label: "Text",
+                    fields: [
+                      {
+                        type: "rich-text",
+                        name: "content",
+                        label: "Inhalt",
+                      },
+                    ],
+                  },
+                  {
+                    name: "text_image",
+                    label: "Text mit Bild",
+                    fields: [
+                      {
+                        type: "image",
+                        name: "image",
+                        label: "Bild",
+                      },
+                      {
+                        type: "rich-text",
+                        name: "content",
+                        label: "Inhalt",
+                      },
+                    ],
+                  },
+                  {
+                    name: "sponsors",
+                    label: "Sponsoren",
+                    fields: [
+                      {
+                        type: "object",
+                        name: "sponsors",
+                        label: "Sponsoren",
+                        ui: {
+                          itemProps: (item) => {
+                            return { label: item?.name };
+                          },
+                        },
+                        list: true,
+                        fields: [
+                          {
+                            type: "string",
+                            name: "name",
+                            label: "Name",
+                            required: true,
+                          },
+                          {
+                            type: "image",
+                            name: "logo",
+                            label: "Logo",
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                ],
               },
               {
                 type: "boolean",
                 name: "on_start",
                 label: "Auf Startseite zeigen?",
-                required: true,
               },
               {
                 type: "number",

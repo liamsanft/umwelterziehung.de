@@ -1,6 +1,9 @@
 ---
 import {formatPaths} from "../../utilities";
 import DefaultLayout from "../../layouts/DefaultLayout.astro"
+import TextSection from "../../sections/projekte/TextSection.astro"
+import TextImageSection from "../../sections/projekte/TextImageSection.astro";
+import SponsorsSection from "../../sections/projekte/SponsorsSection.astro";
 
 export async function getStaticPaths() {
   const projekte = await Astro.glob("../../content/projekte/*.md");
@@ -20,9 +23,18 @@ export async function getStaticPaths() {
   return pathList;
 }
 
-const { Content} = Astro.props.projekt
+const { frontmatter } = Astro.props.projekt
 ---
 
 <DefaultLayout title="Projekte">
-<Content />
+  <h1>{frontmatter.title}</h1>
+  {frontmatter.content.map((section) => {
+    if (section._template == "text") {
+      return <TextSection text={section.content} />
+    } else if(section._template == "text_image"){
+      return <TextImageSection text={section.content} image={section.image} />
+    } else if (section._template == "sponsors") {
+      return <SponsorsSection sponsors={section.sponsors} />
+    }
+  })}
 </DefaultLayout>

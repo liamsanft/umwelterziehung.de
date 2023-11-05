@@ -1,0 +1,6 @@
+---
+import { marked } from "marked";
+const { text } = Astro.props
+---
+
+<div set:html={marked.parse(text)} />

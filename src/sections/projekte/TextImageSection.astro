@@ -1,0 +1,9 @@
+---
+import { marked } from "marked";
+const { text, image } = Astro.props
+---
+
+<div class="overflow-hidden">
+<img src={image} class="float-left m-10 ml-0" />
+<div set:html={marked.parse(text)} />
+</div>
