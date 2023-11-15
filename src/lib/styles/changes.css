@@ -8,4 +8,8 @@
   h1 {
     @apply text-2xl font-black text-dgu-dark-green md:text-3xl;
   }
+
+  .list-none::webkit-details-marker {
+    @apply hidden;
+  }
 }
