@@ -6,7 +6,6 @@ export default {
     serif: ["Lora", "ui-serif", "Georgia"],
     extend: {
       colors: {
-        egg: "#FEF9EF",
         "dgu-green": "#63967D",
         "dgu-dark-green": "#435F51",
       },
