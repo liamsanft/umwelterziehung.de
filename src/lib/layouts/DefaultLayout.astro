@@ -1,0 +1,27 @@
+---
+import "../styles/main.css";
+
+const { title } = Astro.props;
+---
+
+<html lang="de">
+  <head>
+    <!-- Meta Tags nicht verändern! -->
+    <meta charset="utf-8" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- NICHT VERÄNDERN! Titel der Seite wird in einzelnen Page Files geändert! -->
+    <title>{title}</title>
+
+    <!-- Beschreibung der Seite (wird in Google Suchergebnissen unter Titel angezeigt) -->
+    <meta
+      name="description"
+      content="Die Deutsche Gesellschaft für Umwelterziehung fördert die Umwelterziehung als pädagogisch und wissenschaftlich fundierte Auseinandersetzung mit der natürlichen, der sozialen und der gebauten Umwelt. Um diese Ziele zu erreichen, tritt sie in Deutschland vorrangig als nationaler Koordinator von Projekten der Foundation for Environmental Education (FEE) in Erscheinung."
+    />
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
