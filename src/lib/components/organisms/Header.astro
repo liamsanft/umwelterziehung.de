@@ -1,0 +1,84 @@
+<header class="fixed z-50">
+  <button
+    id="menu-button"
+    aria-label="Menü öffnen oder schließen"
+    aria-expanded="false"
+    class="fixed right-0 top-0 z-50 m-5 rounded-lg bg-white/25 px-3 py-1 text-xl font-bold backdrop-blur-sm lg:hidden"
+    >Menü</button
+  >
+  <nav
+    id="nav"
+    role="navigation"
+    aria-label="Menü"
+    class="menu-closed fixed inset-0 z-40 h-full w-full items-center justify-center bg-white/50 backdrop-blur-md lg:mx-auto lg:mt-5 lg:h-max lg:w-max lg:rounded-xl lg:px-10 lg:py-3"
+  >
+    <ul class="flex flex-col text-center text-xl lg:flex-row">
+      <li class="mb-1 lg:m-0 lg:mr-2">
+        <a href="/" class="px-2 py-1">Startseite</a>
+      </li>
+      <li class="my-1 lg:m-0 lg:mx-2">
+        <a href="/neuigkeiten" class="px-2 py-1">Neuigkeiten</a>
+      </li>
+      <li class="my-1 lg:m-0 lg:mx-2">
+        <a href="/projekte" class="px-2 py-1">Projekte</a>
+      </li>
+      <li class="my-1 lg:m-0 lg:mx-2">
+        <a href="/ueber-uns" class="px-2 py-1">Über uns</a>
+      </li>
+      <li class="my-1 lg:m-0 lg:mx-2">
+        <a href="/downloads" class="px-2 py-1">Downloads</a>
+      </li>
+      <li class="mt-1 lg:m-0 lg:ml-2">
+        <a href="/www-umwelt" class="px-2 py-1">www.umwelt</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .menu-closed {
+    display: none;
+  }
+
+  .menu-open {
+    display: flex;
+  }
+
+  @media (min-width: 1024px) {
+    .menu-closed {
+      display: flex;
+    }
+  }
+</style>
+
+<script>
+  const menuButton = document.getElementById("menu-button");
+  const nav = document.getElementById("nav");
+  const body = document.body;
+
+  let menuOpen = false;
+
+  menuButton!.addEventListener("click", () => {
+    if (!menuOpen) {
+      menuOpen = true;
+
+      menuButton!.ariaExpanded = "true";
+
+      nav!.classList.add("menu-open");
+      nav!.classList.remove("menu-closed");
+
+      // so you can't scroll the page while the menu is open
+      body!.style.position = "fixed";
+    } else {
+      menuOpen = false;
+
+      menuButton!.ariaExpanded = "false";
+
+      nav!.classList.add("menu-closed");
+      nav!.classList.remove("menu-open");
+
+      // so you can scroll the page again
+      body!.style.position = "static";
+    }
+  });
+</script>
