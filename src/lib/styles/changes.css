@@ -1,4 +1,7 @@
 /* changes to tailwindcss to do here */
 
 @layer base {
+  body {
+    @apply bg-egg;
+  }
 }

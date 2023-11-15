@@ -1,0 +1,36 @@
+---
+import MarginContainer from "../../components/atoms/MarginContainer.astro";
+import ChevronDown from "../../components/icons/ChevronDown.astro";
+---
+
+<section
+  class="relative h-full overflow-hidden bg-[url('/assets/background.svg')] bg-cover bg-[center_bottom_-10rem] bg-no-repeat"
+>
+  <MarginContainer>
+    <div
+      class="flex h-full flex-col justify-center sm:max-w-[80%] lg:-mt-16 lg:max-w-[45rem]"
+    >
+      <h1 class="text-dgu-dark-green text-3xl font-black lg:text-4xl">
+        Die deutsche Gesellschaft für Umwelterziehung
+      </h1>
+      <p class="mt-2 md:text-lg">
+        fördert die Umwelterziehung als pädagogisch und wissenschaftlich
+        fundierte Auseinandersetzung mit der natürlichen, der sozialen und der
+        gebauten Umwelt. Um diese Ziele zu erreichen, tritt sie in Deutschland
+        vorrangig als nationaler Koordinator von Projekten der
+        <span class="font-bold"
+          >Foundation for Environmental Education (FEE)</span
+        >
+         in Erscheinung.
+      </p>
+    </div>
+  </MarginContainer>
+  <div
+    class="absolute inset-x-0 bottom-0 mx-auto mb-4 flex w-60 flex-col items-center justify-center rounded-md bg-white/25 px-4 py-1 backdrop-blur-sm"
+  >
+    <p class="text-sm">Scrollen, um mehr zu erfahren</p>
+    <div class="w-6">
+      <ChevronDown />
+    </div>
+  </div>
+</section>

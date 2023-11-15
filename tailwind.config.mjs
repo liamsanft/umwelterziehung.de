@@ -4,7 +4,13 @@ export default {
   theme: {
     sans: ["Satoshi", "ui-sans-serif", "system-ui"],
     serif: ["Lora", "ui-serif", "Georgia"],
-    extend: {},
+    extend: {
+      colors: {
+        egg: "#FEF9EF",
+        "dgu-green": "#63967D",
+        "dgu-dark-green": "#435F51",
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };
