@@ -1,0 +1,16 @@
+---
+import MarginContainer from "../lib/components/atoms/MarginContainer.astro";
+import DefaultLayout from "../lib/layouts/DefaultLayout.astro";
+import NewsSection from "../lib/sections/news/NewsSection.astro";
+---
+
+<DefaultLayout title="Neuigkeiten">
+  <MarginContainer>
+    <div class="pb-16 pt-36">
+      <h1>Neuigkeiten</h1>
+      <div class="mt-10">
+        <NewsSection />
+      </div>
+    </div>
+  </MarginContainer>
+</DefaultLayout>
