@@ -68,7 +68,7 @@
       nav!.classList.remove("menu-closed");
 
       // so you can't scroll the page while the menu is open
-      body!.style.position = "fixed";
+      body!.style.overflow = "hidden";
     } else {
       menuOpen = false;
 
@@ -78,7 +78,7 @@
       nav!.classList.remove("menu-open");
 
       // so you can scroll the page again
-      body!.style.position = "static";
+      body!.style.overflow = "auto";
     }
   });
 </script>
