@@ -1,0 +1,16 @@
+---
+import MarginContainer from "../../lib/components/atoms/MarginContainer.astro";
+import DefaultLayout from "../../lib/layouts/DefaultLayout.astro";
+import StartSection from "../../lib/sections/about/StartSection.astro";
+import StructureSection from "../../lib/sections/about/StructureSection.astro";
+---
+
+<DefaultLayout title="Über uns">
+  <MarginContainer>
+    <div class="pb-16 pt-20 lg:pt-36">
+      <h1>Über uns</h1>
+      <StartSection />
+      <StructureSection />
+    </div>
+  </MarginContainer>
+</DefaultLayout>
