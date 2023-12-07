@@ -12,4 +12,8 @@
   .list-none::webkit-details-marker {
     @apply hidden;
   }
+
+  table {
+    @apply text-base;
+  }
 }
