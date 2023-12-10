@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import MarginContainer from "../../lib/components/atoms/MarginContainer.astro";
 import DefaultLayout from "../../lib/layouts/DefaultLayout.astro";
+import dbuLogo from "../../../public/content/media/sponsoren/dbu_logo.jpg";
 import ia21sLogo from "../../../public/content/media/umweltschule/ia21s_logo.jpg";
 ---
 
@@ -160,7 +161,11 @@ import ia21sLogo from "../../../public/content/media/umweltschule/ia21s_logo.jpg
           </p>
         </div>
         <h2>Weitere Informationen rund um das Projekt</h2>
-         Weitere Links...
+        <p>Weitere Links...</p>
+        <h2>Unterstützer</h2>
+        <div class="not-prose">
+          <Image src={dbuLogo} alt="Deutsche Bundesstiftung Umwelt" />
+        </div>
       </div>
     </div>
   </MarginContainer>
