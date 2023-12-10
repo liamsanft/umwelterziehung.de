@@ -16,4 +16,23 @@
   table {
     @apply text-base;
   }
+
+  .contact-card {
+    @apply w-max rounded-lg bg-white px-8 py-3 shadow-lg;
+  }
+
+  .contact-card h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-bold;
+  }
+
+  .contact-card p {
+    @apply my-1;
+  }
+
+  .contact-card a {
+    @apply font-bold underline;
+  }
 }
