@@ -17,6 +17,10 @@
     @apply text-base;
   }
 
+  thead {
+    @apply text-left text-lg;
+  }
+
   .contact-card {
     @apply w-max rounded-lg bg-white px-8 py-3 shadow-lg;
   }
