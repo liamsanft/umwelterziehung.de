@@ -1,0 +1,41 @@
+---
+import MarginContainer from "../../components/atoms/MarginContainer.astro";
+
+import umweltschuleineuropa from "../../../../public/content/media/logos/umeltschuleineuropa.png";
+import greenkey from "../../../../public/content/media/logos/greenkey.webp";
+import blueflag from "../../../../public/content/media/logos/blueflag.svg";
+import ProjectsSection from "../../components/organisms/ProjectsSection.astro";
+---
+
+<section class="py-16">
+  <MarginContainer>
+    <h1 class="text-center">Unsere Projekte</h1>
+    <div class="mt-10">
+      <ProjectsSection
+        projects={[
+          {
+            name: "Green Key Deutschland",
+            description:
+              "Ziel des Programms ist die Entwicklung und Verwaltung eines Umweltzeichens für Umwelt-und Nachhaltigkeitsaspekte in Hotels und Freizeitparks. Green Key ist ein Zertifizierungs-Programm mit dem Ziel einer Sensibilisierung von Eigentümern, Mitarbeitern und Gästen für ihr Potenzial von Umwelt-und Nachhaltigkeitsaspekten in ihrem direkten (natürlichen) Umfeld und mit der Perspektive aktiven Handelns.",
+            image: greenkey,
+            link: "http://umwelterziehung.de/projekte/GreenKey/index.html",
+          },
+          {
+            name: "Blaue Flagge",
+            description:
+              'Seit 1987 wird in Zusammenarbeit mit der FEE die "Blaue Flagge" vergeben. Die Auszeichnung wird verliehen, wenn bestimmte Anforderungen bezüglich des Umweltmanagements, der Umweltkommunikation erfüllt sind, ausreichende Entsorgungsbereiche für (Sonder-)Abfälle und Abwasser und die standardgemäßen Sicherheitsaspekte beachten werden. Die Blaue Flagge ist das erste gemeinsame Umweltsymbol, das für jeweils ein Jahr vergeben wird.',
+            image: blueflag,
+            link: "http://www.blaue-flagge.de/index.html",
+          },
+          {
+            name: "Umweltschule in Europa - Internationale Nachhaltigkeitsschule",
+            description:
+              '"Umweltschule in Europa - Internationale Nachhaltigkeitsschule" ist eine Ausschreibung der europäischen Umweltbildungsstiftung FEE (Foundation for Environmental Education), in Deutschland vertreten durch die Deutsche Gesellschaft für Umwelterziehung (DGU). Gegenwärtig beteiligen sich weltweit über 30000 Schulen in mehr als 50 Staaten; in Deutschland waren es im vergangenen Schuljahr mehr als 900 Schulen aus 8 Bundesländern.',
+            image: umweltschuleineuropa,
+            link: "/projekte/umweltschule-in-europa",
+          },
+        ]}
+      />
+    </div>
+  </MarginContainer>
+</section>
