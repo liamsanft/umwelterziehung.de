@@ -1,0 +1,153 @@
+---
+import { Image } from "astro:assets";
+import MarginContainer from "../../lib/components/atoms/MarginContainer.astro";
+import DefaultLayout from "../../lib/layouts/DefaultLayout.astro";
+import toyota_sponsors from "../../../public/content/media/sponsoren/toyota_sponsors.jpg";
+import tffe from "../../../public/content/media/sponsoren/tffe.png";
+import kew from "../../../public/content/media/sponsoren/kew.png";
+---
+
+<DefaultLayout title="The Great plant hunt - Die große Pflanzenjagd">
+  <MarginContainer>
+    <div class="pb-16 pt-20 lg:pt-36">
+      <h1>The Great plant hunt - Die große Pflanzenjagd</h1>
+      <div class="prose mt-6 max-w-full">
+        <div>
+          <p>
+            Diese Kampagne ist eine gemeinsame Initiative von Toyota Motor
+            Europe und der Stiftung für Umwelterziehung. Der Schwerpunkt liegt
+            auf der Biodiversität mit besonderem Augenmerk auf Pflanzen und den
+            damit verbundenen Arten. Pflanzen sind ein wichtiger Bestandteil
+            vieler Lebenszyklen, sie unterstützen Insekten, Vögel und
+            Säugetiere, indem sie Nahrung und Lebensräume für Nester und
+            Unterkünfte etc. bereitstellen. Die Kampagne wurde im November 2015
+            offiziell gestartet. Im ersten Jahr wurde sie in zehn Ländern in
+            ganz Europa durchgeführt. Im zweiten Jahr, das im September 2016
+            begann, stieg die Zahl der Länder auf 15. Im dritten Jahr begrüßte
+            das Projekt die Niederlande als 16. Land. Die Kampagne umfasst
+            Bildungsaspekte, die auf den FEE-Bildungsprinzipien basieren, und
+            praktische Aktivitäten, die auf Ressourcen basieren, die vom Royal
+            Botanic Gardens, Kew, mit Unterstützung des Wellcome Trust
+            entwickelt wurden.
+          </p>
+          <p>
+            Ziel der Kampagne ist es, die Schüler über die biologische Vielfalt
+            und ihre Bedeutung aufzuklären und sie zu ermutigen, positive
+            Maßnahmen zu ergreifen.
+          </p>
+        </div>
+
+        <h2>Zielsetzung</h2>
+        <div>
+          <ul>
+            <li>
+              Entwicklung junger Menschen als Fürsprecher für den Naturschutz
+            </li>
+            <li>Förderung lokaler Biodiversitätsmaßnahmen</li>
+            <li>
+              Entwicklung wissenschaftlicher Ressourcen im Einklang mit den
+              Grundsätzen des Übereinkommens über die biologische Vielfalt
+              (CBD), um es Lehrern zu ermöglichen, die Bildungstätigkeit im
+              Bereich der biologischen Vielfalt zu fördern
+            </li>
+            <li>
+              Förderung des kritischen Denkens durch "go and see"-Studienansatz
+              (learning by doing)
+            </li>
+            <li>
+              Unterstützung bei der Erreichung der EU/UN-Ziele für die Bildung
+              im Bereich der biologischen Vielfalt
+            </li>
+          </ul>
+        </div>
+
+        <h2>Wer kann teilnehmen?</h2>
+        <div>
+          <p>Die Große Pflanzenjagd läuft derzeit in 16 Ländern Europas.</p>
+          <p>
+            Die Schulen werden von den nationalen Akteuren in jedem der
+            teilnehmenden Länder ausgewählt. Wenn Sie an einer Teilnahme
+            interessiert sind, wenden Sie sich bitte an den Koordinator des
+            Projektes in Deutschland, siehe "Kontakte".
+          </p>
+        </div>
+
+        <h2>Kontakte</h2>
+        <div class="not-prose flex flex-wrap gap-10">
+          <div class="contact-card mt-6">
+            <h2>Deutschland</h2>
+            <p>Klaus Hübner</p>
+            <p>
+              Sperberstr.29<br />
+              91161 Hilpoltstein
+            </p>
+            <p>Tel.: +49 159 04411188</p>
+            <p>
+              <a href="mailto:klaus.huebner7@icloud.com"
+                >Email: klaus.huebner7@icloud.com</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <h2>Das Projekt / Partner</h2>
+        <div>
+          <p>
+            Das Projekt wird von der Deutschen Gesellschaft für Umwelterziehung
+            e.V. (DGU) in Zusammenarbeit mit Toyota Motor Europe, dem
+            Königlichen Botanische Garten, Kew sowie der FEE durchgeführt.
+          </p>
+          <p>
+            <Image
+              src={toyota_sponsors}
+              alt="Ausgezeichnet als offizielles Projekt der Weltdekade"
+              class="w-full max-w-96"
+            />
+          </p>
+          <p>
+            Die FEE (Stiftung für Umwelterziehung) ist eine nichtstaatliche,
+            gemeinnützige Organisation mit dem Ziel, eine nachhaltige
+            Entwicklung durch Umweltbildung zu fördern. Mehr als 80 Länder
+            weltweit arbeiten mit verschiedenen FEE-Programmen zusammen. Die
+            Organisation ist von der UNESCO als weltweit führend in den
+            Bereichen Umweltbildung und Bildung für nachhaltige Entwicklung
+            anerkannt. Partner der FEE in Deutschland ist die DGU.
+          </p>
+          <p>
+            Der Königliche Botanische Garten, Royal Botanic Gardens, Kew. Kew's
+            Mission ist es, die globale Ressource für Pflanzen- und Pilzwissen
+            und den weltweit führenden botanischen Garten zu sein. Der Wellcome
+            Trust ist eine weltweite gemeinnützige Stiftung, die sich der
+            Verbesserung der Gesundheit widmet und Wissenschaft, Geistes- und
+            Sozialwissenschaften und öffentliches Engagement unterstützt.
+          </p>
+          <p>
+            The Great Plant Hunt" wurde vom Wellcome Trust anlässlich des 200.
+            Geburtstags von Charles Darwin in Auftrag gegeben und finanziert.
+            Die Great Plant Hunt Materialien wurden von den Royal Botanic
+            Gardens, Kew, entwickelt und hergestellt.
+          </p>
+          <p>
+            Toyota Motor Europe hat den Toyota Fund for Europe ins Leben
+            gerufen, um mit gemeinnützigen Organisationen bei
+            Gemeinschaftsaktivitäten zusammenzuarbeiten, die die Umwelt, die
+            technische Ausbildung und die Verkehrssicherheit unterstützen. Die
+            vom Toyota-Fonds für Europa unterstützten Projekte zielen darauf ab,
+            das Bewusstsein zu schärfen und positive Veränderungen
+            herbeizuführen.
+          </p>
+        </div>
+
+        <h2>Unterstützer</h2>
+        <a
+          href="https://www.toyotauk.com/the-toyota-charitable-trust/link-to-tfe-page"
+        >
+          <Image src={tffe} alt="Toyota Fund for Europe" class="max-w-52" />
+        </a>
+        <a href="https://www.kew.org/">
+          <Image src={kew} alt="Kew Royal Botanic Gardens" class="max-w-52" />
+        </a>
+      </div>
+    </div>
+  </MarginContainer>
+</DefaultLayout>
