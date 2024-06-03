@@ -22,7 +22,7 @@
   }
 
   .contact-card {
-    @apply w-max max-w-full rounded-lg bg-white px-8 py-3 shadow-lg;
+    @apply h-max w-max max-w-full rounded-lg bg-white px-8 py-3 shadow-lg;
   }
 
   .contact-card h1,
