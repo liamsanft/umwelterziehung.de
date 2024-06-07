@@ -1,0 +1,224 @@
+body {
+  background-color: rgb(20, 20, 17);
+}
+#mainBox {
+  background: none repeat scroll 0 0 #637703;
+  color: #ffffff;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+  margin: 0 auto;
+  width: 908px;
+}
+#header {
+  background-color: #566603;
+  background-image: url("/green-key/images/header.jpg");
+  /*© antoha713 - Fotolia.com*/
+  background-repeat: no-repeat;
+  border-left: 4px solid #414f02;
+  border-right: 4px solid #414f02;
+  height: 340px;
+  margin: 0;
+  padding: 0;
+  width: 900px;
+}
+#contentBox {
+  background: none repeat scroll 0 0 rgb(86, 102, 3);
+  border-left: 4px solid #414f02;
+  border-right: 4px solid #414f02;
+  color: #ffffff;
+  float: left;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 900px;
+}
+/*BREADCRUMB ------------------------------------------------*/
+#breadCrumb {
+  position: relative;
+  top: 320px;
+  left: 40px;
+  margin: 10px 20px 0px 0px;
+  padding: 0;
+  width: 640px;
+}
+#breadCrumb ul {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+#breadCrumb ul li {
+  display: inline;
+  background-image: url("/green-key/images/BreadcrumbIcon_seperator.png");
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  font-size: 12pt;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#breadCrumb ul li:first-child {
+  display: inline;
+  background-image: url("/green-key/images/BreadcrumbIcon_home.png");
+  background-repeat: no-repeat;
+  padding-left: 25px;
+}
+#breadCrumb ul li a {
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+#breadCrumb ul li a:hover {
+  color: red;
+}
+#content {
+  display: inline;
+  float: left;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  margin: 40px 40px 0;
+  width: 640px;
+}
+#sideBar {
+  background-color: #96b937;
+  display: inline;
+  float: right;
+  margin: 0 20px 0 0;
+  padding: 0;
+  width: 160px;
+}
+#footer {
+  background: none repeat scroll 0 0 #566603;
+  clear: both;
+  font-size: 10pt;
+  text-transform: uppercase;
+  height: 40px;
+  padding: 20px;
+  text-align: left;
+}
+#footer a {
+  color: #b7fd00;
+  text-decoration: none;
+}
+#footer a:hover {
+  color: #f5450a;
+}
+#footer a:visited {
+  color: #b7fd00;
+}
+#content h2 {
+  font-size: 16pt;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  padding: 0;
+  text-transform: uppercase;
+}
+#content h2.firstHeadline {
+  margin: 0 0 20px;
+}
+#content h2:first-child {
+  margin: 0 0 20px;
+}
+#content ul li {
+  list-style-type: square;
+  margin-left: 20px;
+}
+p:first-letter {
+  font-size: 1.3em;
+}
+img.floatleft {
+  border: 2px solid #9bbd3c;
+  float: left;
+  margin: 4px 40px 20px 0;
+  padding: 2px;
+}
+#content a {
+  color: #b7fd00;
+  text-decoration: none;
+}
+#content a:hover {
+  color: #f5450a;
+}
+#content a:visited {
+  color: #b7fd00;
+}
+
+#menu {
+  margin: 0;
+  padding: 0;
+  width: 160px;
+}
+#menu ul {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+#menu a {
+  background-image: url("/green-key/images/menu_bg.gif");
+  background-repeat: repeat-x;
+  border-top: 2px solid #637703;
+  color: white;
+  display: block;
+  font-size: 13pt;
+  font-weight: bold;
+  margin: 1px;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#menu span {
+  color: rgb(58, 70, 14);
+  font-size: 9pt;
+  font-weight: normal;
+  text-transform: lowercase;
+}
+#menu a:hover {
+  background-image: url("/green-key/images/menu_hover.gif");
+  background-repeat: repeat-x;
+}
+#logo_menu {
+  margin: 25px;
+}
+#logo_menu_container {
+  border-top: 2px solid #637703;
+}
+#content table.typ1 {
+  border-color: #9dbf3e;
+  border-style: solid;
+  border-width: 2px;
+  font-size: 11pt;
+  padding: 4px;
+  width: 620px;
+}
+#content table.typ1 th {
+  background-color: #404d02;
+  font-weight: bold;
+  padding: 2px 2px 2px 10px;
+  text-align: left;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+#content table.typ1 tbody th {
+  background-color: #404d02;
+  padding: 2px;
+  text-align: center;
+  vertical-align: top;
+}
+#content table.typ1 tr {
+  background-color: #697e03;
+  text-align: left;
+}
+#content table.typ1 td {
+  padding: 2px 2px 2px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+#content table.typ1 tr td ul.docList {
+  list-style-image: url("/green-key/images/print15px.png");
+  margin: 0;
+  padding: 5px 0 0 4px;
+}
+#content table.typ1 tr td ul.contactList {
+  list-style-image: url("/green-key/images/email15px.png");
+  margin: 0;
+  padding: 5px 0 0 4px;
+}
